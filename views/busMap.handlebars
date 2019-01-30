@@ -1,0 +1,22 @@
+<div id="content">
+    {{#each Resv}}
+    {{#if seatResorNot}}
+    <p>{{seatResorNot}}</p>
+    <form method="post" action="/bus/buttonid">
+        <button id={{seatNo}} class="btn btn-primary btn-sm" type="submit" disabled name={{seatNo}} value={{seatNo}}>{{seatNo}}
+        </button>
+    </form>
+    {{else}}
+    <p>{{seatResorNot}}</p>
+    <form method="post" action="/bus/buttonid">
+        <button id={{seatNo}} class="btn btn-primary btn-sm" type="submit" name="Seats" value={{seatNo}}>{{seatNo}}
+        </button>
+    </form>
+    {{/if}}
+    {{/each}}
+
+    <form method="post" action="/bus/buttonid">
+        <button class="btn btn-success btn-sm" type="submit" name="Seats" value="Sno12">Sno12</button>
+    </form>
+
+</div>

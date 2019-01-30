@@ -1,0 +1,48 @@
+<script>
+    //function myFunction() {
+      //  alert("seatNo1")
+        // document.getElementById("seatNo1").disabled = true;
+    }
+    //$(document).ready(function () {
+      //  $("#formABC").submit(function (e) {
+        //    e.preventDefault();
+            //$("#seatNo1").attr("disabled", true);
+          //  return true;
+       // });
+   // });
+</script>
+<form method="POST" action="/bus/SeeBusMap">
+    <div class=" modal-body">
+        <div class="form-group">
+            <label>Seat #</label>
+            <input type="text" name="seatNo" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Pessenger Name</label>
+            <input type="text" name="PessengerName" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Amount</label>
+            <input type="text" name="deposit" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Status</label>
+            {{!-- <i class="fas fa-envelope prefix grey-text"></i> --}}
+            <input type="text" name="seatStatus" class="form-control">
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button onClick="myFunction()" class="btn btn-outline-success btn-lg" type="submit">Save Seats</button>
+    </div>
+    <button id="seatNo1" class="btn btn-success btn-sm" type="submit">Ok</button>
+    <form method="post" action="/bus/buttonid">
+        <button id=" seatNo1" class="btn btn-success btn-sm" type="submit" name="Seats" value="Sno1">Sno1</button>
+    </form>
+    <form method="post" action="/bus/buttonid">
+        {{!-- <input type="hidden" name="Seats" value="Sno2"> --}}
+        <button id="seatNo2" class="btn btn-success btn-sm" type="submit" name="Seats" value="Sno2">Sno2</button>
+    </form>
+    <form method="post" action="/bus/buttonid">
+        <button id="seatNo3" class="btn btn-success btn-sm" type="submit" name="Seats" value="Sno3">Sno3</button>
+    </form>
+</form>

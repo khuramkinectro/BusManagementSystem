@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Red Bus</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <script src="/js/myJsfile/jsfile.js"></script>
+    <link rel="stylesheet" href="/css/busmap.css">
+
+    <link rel="stylesheet" href="/css/busmap.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <body>
+        <div class="wrapper">
+            <header>
+                <nav>
+                    <div class="menu-icon">
+                        <i class="fa fa-bars fa-2x">
+
+                        </i>
+                    </div>
+                    <div class="logo">
+                        Bus Reservation System
+                    </div>
+                    <ul>
+                        {{#if seat}}
+                        <li><a href="/post/adminGetAllPosts">Get All Posts</a></li>
+                        <li><a href="/logout">Logout</a>
+                        <li><b>{{seats.deposit}}</b></li>
+                        {{else}}
+                        <li><a href="/post/createpost">Create Post</a></li>
+                        <li><a href="/post/getPosts">Get All Posts</a></li>
+                        {{/if}}
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        {{{body}}}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</body>
+
+</html>
