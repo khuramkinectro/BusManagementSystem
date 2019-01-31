@@ -1,14 +1,10 @@
-{{# each Seats }}
+{{#each Seats }}
+
 <div class="card" style="width: 8rem">
     <div class=" card text-white bg-dark" style="height: 9rem">
         <div class="card-body">
-            <b>
-                <p class="card-text">{{this.seatNo}}</p>
-                {{!-- <p class="card-text">{{this.PessengerName}}</p>
-                <p class="card-text">{{this._id}}</p> --}}
-                {{!-- <p class="card-text">{{this.deposit}}</p>
-                <p class="card-text">{{this.seatStatus}}</p>
-                <p class="card-text">{{this.seatResorNot}}</p> --}}
+            <b>aa
+                <p class="card-text">aa {{this.seatNo}}</p>
                 <form method="get" action="/bus/seatsdetail/{{this.id}}">
                     <button class="btn btn-success" type="submit" id="seats2" onClick="getButtonID(this.id)">Detail</button>
                 </form>

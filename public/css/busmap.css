@@ -7,6 +7,20 @@
 /*  */
 /*  */
 /*  */
+.card {
+  margin-left: -100px;
+}
+.myid {
+  margin: 10%;
+  padding: 10%;
+}
+
+.myid img {
+  position: absolute;
+}
+.solid {
+  border-style: solid;
+}
 .form-dark .font-small {
   font-size: 0.8rem;
 }

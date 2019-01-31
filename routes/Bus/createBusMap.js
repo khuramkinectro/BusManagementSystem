@@ -9,11 +9,19 @@ router.post("/busMap", function(req, res) {
   });
   console.log(req.seats);
   newBus.save();
-  res.render("busMap");
-});
-router.get("/busMap", function(req, res) {
-  console.log("busaaaamap");
-  res.render("busMap");
+  res.redirect("/bus/busMap");
+  // docs.push({
+  //   noOfSeats: req.body.noOfSeats,
+  //   busname: req.body.busname
+  // });
+  // // let docs = [];
+  // // for (let i = 0; i < req.body.noOfSeats; i++) {}
+  // return Bus. (docs);
 });
 
+router.get("/busMap", function(req, res) {
+  Bus.find().then(function(doc) {
+    res.render("busMap", { Seats: doc });
+  });
+});
 module.exports = router;

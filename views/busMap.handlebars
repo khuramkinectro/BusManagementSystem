@@ -1,22 +1,40 @@
-<div id="content">
-    {{#each Resv}}
-    {{#if seatResorNot}}
-    <p>{{seatResorNot}}</p>
-    <form method="post" action="/bus/buttonid">
-        <button id={{seatNo}} class="btn btn-primary btn-sm" type="submit" disabled name={{seatNo}} value={{seatNo}}>{{seatNo}}
-        </button>
-    </form>
-    {{else}}
-    <p>{{seatResorNot}}</p>
-    <form method="post" action="/bus/buttonid">
-        <button id={{seatNo}} class="btn btn-primary btn-sm" type="submit" name="Seats" value={{seatNo}}>{{seatNo}}
-        </button>
-    </form>
-    {{/if}}
-    {{/each}}
+<script>
+    $(function busmap(seatsss) {
+        for (var i = 1; i <= 20; i++) {
+            $(".myid").append('<img src="/images/2.jpg" width="50" height="50" />')
+        }
+    });
+</script>
 
-    <form method="post" action="/bus/buttonid">
-        <button class="btn btn-success btn-sm" type="submit" name="Seats" value="Sno12">Sno12</button>
-    </form>
+{{#each Seats }}
+<div class="card" style="width: 30rem" style="height: 13rem">
+    <div class=" card text-white bg-dark">
+        <div class="card-body">
+            <b>
+                <h4>Bus Name : <b>{{busname}}</b></h4>
+                <p class="card-text">Bus ID : {{id}}</p>
+                <p class="card-text">Total Seats : {{noOfSeats}}</p>
+                <form method="get" action="/bus/seatsdetail/{{this.id}}">
+                    <button class="btn btn-success btn-md" type="submit">
+                        Add Bus
+                    </button>
+                </form>
+                <br>
+                <form method="get" action="/bus/busMap">
+                    {{noOfSeats}}
+                    <button class="btn btn-primary btn-md" value="{{noOfSeats}}" onClick="busmap({{noOfSeats}})">
+                        View Bus Map
+                    </button>
+                </form>
+        </div>
+    </div>
+
+</div>
+<br>
+{{/each}}
+<div class="solid">
+    <div class=" myid">
+
+    </div>
 
 </div>
